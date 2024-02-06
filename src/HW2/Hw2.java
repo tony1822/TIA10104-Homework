@@ -57,14 +57,27 @@ public class Hw2 {
 
 		
 		// 請設計一隻Java程式,輸出結果為以下:
-		
+		for(int i=11;i>1;i--) {
+			for(int j=1;j<i;j++) {
+				System.out.print(j);
+			}System.out.println();
+			
+		}
 		
 		System.out.println("=============================================================================");
 		// 請設計一隻Java程式,輸出結果為以下:
-			
+		      int uni=65;
+			for(int i=1;i<=6;i++) {
+				for(int j=1;j<=i;j++) {
+					System.out.print((char)uni);
+				}System.out.println();
+				uni++;
+				
+				
+			}
 		
 		
-		
+			System.out.println("=============================================================================");
 		// 使用for+while輸出九九乘法算數
 				for (int i = 1; i <= 9; i++) {
 					int j = 1;
