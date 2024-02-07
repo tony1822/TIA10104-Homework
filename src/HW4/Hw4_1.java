@@ -18,8 +18,18 @@ public class Hw4_1 {
 				System.out.print(arr[i] + "\t");
 			}
 		}
+		System.out.println();
+		System.out.println("=====================================================================");
 
 //		請建立一個字串,經過程式執行後,輸入結果是反過來的
+		String s = "Hello World";
+		char[] arra = new char[20];
+		for (int i = s.length() - 1; i >= 0; i--) {
+			arra[i] = s.charAt(i);
+			System.out.print(arra[i] + "");
+		}
+		System.out.println();
+		System.out.println("=====================================================================");
 
 	}
 
