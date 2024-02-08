@@ -1,5 +1,7 @@
 package HW4;
 
+import java.util.Scanner;
+
 public class Hw4_1 {
 
 	public static void main(String[] args) {
@@ -42,17 +44,36 @@ public class Hw4_1 {
 			String a = array[i];
 			for (int j = 0; j < array[i].length(); j++) {
 
-			if (a.charAt(j) == ('a') || a.charAt(j) == ('e') || a.charAt(j) == ('i') || a.charAt(j) == ('o')
+				if (a.charAt(j) == ('a') || a.charAt(j) == ('e') || a.charAt(j) == ('i') || a.charAt(j) == ('o')
 						|| a.charAt(j) == ('u')) {
 					total2++;
 				}
 
 			}
-		}System.out.println(total2);
+		}
+		System.out.println(total2);
 		System.out.println("=====================================================================");
+
+		// 請設計一個程式,可以讓小華輸入欲借的金額後,便會顯示哪些員工編號的同事
+		// 有錢可借他;並且統計有錢可借的總人數:例如輸入 1000 就顯示「有錢可借的
+		// 員工編號: 25 19 27 共 3 人!」
+		int ar[][] = { { 25, 2500 }, { 32, 800 }, { 8, 500 }, { 19, 1000 }, { 27, 1200 } };
+		Scanner sc = new Scanner(System.in);
+		System.out.println("請輸入要預借的金額");
+		int total3 = 0;
+		int an = sc.nextInt();
+		System.out.println("有錢可借的員工為:");
+		for (int i = 0; i < ar.length; i++) {
+			for (int j = 1; j < ar[i].length; j++) {
+				if (an <= ar[i][1]) {
+					System.out.print(ar[i][0]+"\t");
+					total3++;
+				}
+			}
+		}
+		System.out.println("共" +total3+"人!" );
 		
-			//		請設計一個程式,可以讓小華輸入欲借的金額後,便會顯示哪些員工編號的同事
-			//		有錢可借他;並且統計有錢可借的總人數:例如輸入 1000 就顯示「有錢可借的
-			//		員工編號: 25 19 27 共 3 人!」
+		System.out.println("=====================================================================");
+
 	}
 }
