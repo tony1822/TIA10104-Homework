@@ -66,14 +66,40 @@ public class Hw4_1 {
 		for (int i = 0; i < ar.length; i++) {
 			for (int j = 1; j < ar[i].length; j++) {
 				if (an <= ar[i][1]) {
-					System.out.print(ar[i][0]+"\t");
+					System.out.print(ar[i][0] + "\t");
 					total3++;
 				}
 			}
 		}
-		System.out.println("共" +total3+"人!" );
-		
+		System.out.println("共" + total3 + "人!");
+
 		System.out.println("=====================================================================");
+		// • 請設計由鍵盤輸入三個整數,分別代表西元yyyy年,mm月,dd日,執行後會顯示是該年的第幾天
+		// 例:輸入 1984 9 8 三個號碼後,程式會顯示「輸入的日期為該年第252天」
+		int[] arr3 = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		int x = 0; // 設立變數x是為了讓陣列可以依序相加
+		int daytotal = 0;
+		Scanner ss = new Scanner(System.in);
+		System.out.println("請輸入西元yyyy年,mm月,dd日");
+		int yy = ss.nextInt();
+		int mm = ss.nextInt();
+		int dd = ss.nextInt();
+
+		if (yy % 4 == 0 && yy % 100 != 0 || yy % 400 == 0) { // 判斷是否為閏年，是的話讓2月天數加一
+			arr3[1]++;
+		}
+		for (int i = 1; i <= mm - 1; i++) {
+			if (mm == 2 && dd > 29) {
+				System.out.println("2月不應該超過29天!"); // 防止2月超過29天
+				daytotal = 0;
+				dd = 0;
+			} else {				
+				daytotal += arr3[x]; //進行天數計算x代表從索引0(第一個月)開始計算
+				x++;
+			}
+		}
+
+		System.out.println("輸入的日期為該年第" + (daytotal + dd) + "天");
 
 	}
 }
