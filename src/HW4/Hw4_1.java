@@ -112,30 +112,30 @@ public class Hw4_1 {
 					{98,70,89,90,75,90,89,90},
 					{90,80,100,75,50,20,99,75},
 					};
-					int ex1[] = new int[8];//宣告空一維陣列來當同學次數的計算
-					for (int i = 0; i < ex.length; i++) {
-						int max = ex[i][0];	//宣告max來當作第每列第一個數字來比出最大值
-						int p=0;
-						int last=0;
-						for (int j = 1; j < ex[i].length; j++) {
-							p++;
-							if (ex[i][j] > max) { //當後面的數字有比max大就給他賦值以此來找出最大值
-								max = ex[i][j];
-								last = j;//這邊的last是來儲存最大max值得索引[j]以此來知道是哪位同學要加1							
-							} 
-						if(p==7) {        //當全部數字跑完時，就會把last當作ex1陣列的索引值(學號)然後加1做計算，
-							ex1[last]+=1; //以此類推跑完6列
-						}
-						}
-						
-					}
-					System.out.println("1號同學考最高分的次數="+ex1[0]);
-					System.out.println("2號同學考最高分的次數="+ex1[1]);
-					System.out.println("3號同學考最高分的次數="+ex1[2]);
-					System.out.println("4號同學考最高分的次數="+ex1[3]);
-					System.out.println("5號同學考最高分的次數="+ex1[4]);
-					System.out.println("6號同學考最高分的次數="+ex1[5]);
-					System.out.println("7號同學考最高分的次數="+ex1[6]);
-					System.out.println("8號同學考最高分的次數="+ex1[7]);					
-				}
+			int ex1[] = new int[8];// 宣告空一維陣列來當同學次數的計算
+			for (int i = 0; i < ex.length; i++) {
+			int max = ex[i][0]; // 宣告max來當作第每列第一個數字來比出最大值
+			int p = 0;
+			int last = 0;
+			for (int j = 1; j < ex[i].length; j++) {
+			p++;
+			if (ex[i][j] > max) { // 當後面的數字有比max大就給他賦值以此來找出最大值
+			max = ex[i][j];
+			last = j;// 這邊的last是來儲存最大max值得索引[j]以此來知道是哪位同學要加1
 			}
+			if (p == 7) { // 當全部數字跑完時，就會把last當作ex1陣列的索引值(學號)然後加1做計算，
+				ex1[last] += 1; // 以此類推跑完6列
+			}
+		}
+
+	}
+	System.out.println("1號同學考最高分的次數=" + ex1[0]);
+	System.out.println("2號同學考最高分的次數=" + ex1[1]);
+	System.out.println("3號同學考最高分的次數=" + ex1[2]);
+	System.out.println("4號同學考最高分的次數=" + ex1[3]);
+	System.out.println("5號同學考最高分的次數=" + ex1[4]);
+	System.out.println("6號同學考最高分的次數=" + ex1[5]);
+	System.out.println("7號同學考最高分的次數=" + ex1[6]);
+	System.out.println("8號同學考最高分的次數=" + ex1[7]);
+}
+}
