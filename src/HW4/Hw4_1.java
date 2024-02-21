@@ -27,8 +27,8 @@ public class Hw4_1 {
 //		請建立一個字串,經過程式執行後,輸入結果是反過來的
 		String s = "Hello World";
 		char[] arra = new char[20];
-		for (int i = s.length() - 1; i >= 0; i--) {
-			arra[i] = s.charAt(i);
+		for (int i = s.length() - 1; i >= 0; i--) { 	// int i=s.length()-1這個起始值是要讓
+			arra[i] = s.charAt(i);						//陣列從Strint s最後一個文字開始取值
 			System.out.print(arra[i] + "");
 		}
 		System.out.println();
@@ -87,7 +87,6 @@ public class Hw4_1 {
 		int yy = ss.nextInt();
 		int mm = ss.nextInt();
 		int dd = ss.nextInt();
-
 		if (yy % 4 == 0 && yy % 100 != 0 || yy % 400 == 0) { // 判斷是否為閏年，是的話讓2月天數加一
 			arr3[1]++;
 		}
