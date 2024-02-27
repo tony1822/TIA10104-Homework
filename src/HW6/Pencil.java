@@ -13,7 +13,7 @@ public class Pencil extends Pen {
 	}
 	
 	public int getPrice() {
-		int t=(int) (super.getPrice()*0.8);
+		int t=(int)(super.getPrice()*0.8);
 		System.out.println(t);
 		return t;
 	}
