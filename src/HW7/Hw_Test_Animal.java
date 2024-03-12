@@ -11,7 +11,6 @@ import java.io.ObjectOutputStream;
 
 public class Hw_Test_Animal {
 	public static void main(String[] args) throws ClassNotFoundException {
-//		private static final long seriaLVersionUID =1L;
 		 File fi=new File("C://data");
 		 if(!fi.exists()) {
 			 fi.mkdir();
