@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Hw10_3 {
 public static void main(String[] args) {
 	//請設計一隻程式,讓使用者輸入日期(年月日,例如:20110131)後,可以轉成想要的輸出格式化成
-	String regex="^\\d{4}[0][1-9][0-3][1-9]$";
+	String regex="^\\d{4}[0][1-9][0-3]\\d$";
 	Scanner sc =new Scanner(System.in);
 	System.out.println("請輸入日期(年月日,例如:20110131)");
 	String date =sc.next();
