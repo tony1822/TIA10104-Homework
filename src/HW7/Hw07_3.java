@@ -12,10 +12,10 @@ public class Hw07_3 {
 			File ontput =new File(a2);
 			FileInputStream in =new FileInputStream(intput);
 			FileOutputStream ou=new FileOutputStream(ontput,true);
-			int a;
+			int tex;
 			
-			while((a=in.read())!=-1) {
-				ou.write(a);
+			while((tex=in.read())!=-1) {
+				ou.write(tex);
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
